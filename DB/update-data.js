@@ -6,7 +6,7 @@ async function execute() {
 
     try {
         const {rows} = await sql`
-        UPDATE transaksi SET title = "RAWWW" WHERE id = 1`
+        UPDATE transaksi SET keterangan = "dikasih" WHERE id = 1`
         console.log(rows)
     } catch (error) {
         console.log(error)
