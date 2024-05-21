@@ -17,7 +17,6 @@ export default function Handler() {
 
     return(
         <>
-            Ini id {idDetail}
             {showData === null && <p>Data Kosong</p>}
             {showData === undefined && <p>Loading...</p>}
             {showData && (
