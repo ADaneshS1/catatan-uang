@@ -19,13 +19,13 @@ export default function Home() {
       for(let i = 0; i < data.data.length; i++) {
         dataTotalIncome += data.data[i].income
       }
+      setIncomeTotal(dataTotalIncome)
 
       let dataTotalOutcome = 0;
       for(let i = 0; i < data.data.length; i++) {
         dataTotalOutcome += data.data[i].outcome
       }
       setoutcomeTotal(dataTotalOutcome)
-      setIncomeTotal(dataTotalIncome)
 
       setTotalBalance(dataTotalIncome - dataTotalOutcome)
     })

@@ -1,0 +1,177 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "PROTOTYPE API ",
+    "collectionId": "5a6b9b38-5f49-4ada-a96e-4b1b716d2195",
+    "dateExported": "2024-05-21T04:26:16.332Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "0c69e887-d2eb-46ef-b00a-53d9d5a7e6a0",
+            "colId": "5a6b9b38-5f49-4ada-a96e-4b1b716d2195",
+            "containerId": "",
+            "name": "INSERT Data",
+            "url": "http://localhost:3000/api/insertData",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-04-25T02:11:37.541Z",
+            "modified": "2024-05-16T07:09:04.814Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"keterangan\":\"gaji\",\n  \"income\":1000,\n  \"tanggal\":22,\n  \"bulan\":5,\n  \"tahun\":2022\n}",
+                "form": []
+            },
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "tc.test(\"Response code expect to be 200\", function () {\r",
+                            "  expect(tc.response.status).to.equal(200);\r",
+                            "})\r",
+                            "\r",
+                            "tc.test(\"Munculkan pesan berhasil\", function () {\r",
+                            "  expect(tc.response.json.message).to.equal(\"Success\")\r",
+                            "})"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "b64706a1-6ce5-46ed-b364-77657f6553fe",
+            "colId": "5a6b9b38-5f49-4ada-a96e-4b1b716d2195",
+            "containerId": "",
+            "name": "Update Data",
+            "url": "http://localhost:3000/api/updateData/?id=1",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-04-25T02:28:41.414Z",
+            "modified": "2024-05-21T04:06:21.379Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n \"title\":\"Tugas\",\n \"contain\":\"hal 12\"\n}",
+                "form": []
+            },
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "tc.test(\"Response code expect to be 200\", function () {\r",
+                            "  expect(tc.response.status).to.equal(200);\r",
+                            "})\r",
+                            "\r",
+                            "tc.test(\"Munculkan pesan berhasil\", function () {\r",
+                            "  expect(tc.response.json.message).to.equal(\"Success\")\r",
+                            "})"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "53e3ee0c-ca18-4a65-a651-7bde81eacc2c",
+            "colId": "5a6b9b38-5f49-4ada-a96e-4b1b716d2195",
+            "containerId": "",
+            "name": "Get Data All",
+            "url": "http://localhost:3000/api/getData",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2024-04-25T02:17:56.050Z",
+            "modified": "2024-05-07T06:31:21.130Z",
+            "headers": [],
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "tc.test(\"Response code expect to be 200\", function () {\r",
+                            "  expect(tc.response.status).to.equal(200);\r",
+                            "})\r",
+                            "\r",
+                            "tc.test(\"Munculkan pesan berhasil\", function () {\r",
+                            "  expect(tc.response.json.message).to.equal(\"Success\")\r",
+                            "})"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "f23440c6-69fb-46b9-ab95-866c5852e658",
+            "colId": "5a6b9b38-5f49-4ada-a96e-4b1b716d2195",
+            "containerId": "",
+            "name": "Get Data Detail",
+            "url": "http://localhost:3000/api/getDataDetail?id=1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-04-25T02:23:49.168Z",
+            "modified": "2024-05-21T03:59:46.304Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "tc.test(\"Response code expect to be 200\", function () {\r",
+                            "  expect(tc.response.status).to.equal(200);\r",
+                            "})\r",
+                            "\r",
+                            "tc.test(\"Munculkan pesan berhasil\", function () {\r",
+                            "  expect(tc.response.json.message).to.equal(\"Success\")\r",
+                            "})"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "9e6b9c94-accf-4faf-9512-ba16a4217a27",
+            "colId": "5a6b9b38-5f49-4ada-a96e-4b1b716d2195",
+            "containerId": "",
+            "name": "Del Data",
+            "url": "http://localhost:3000/api/delData?id=1",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-04-25T02:25:34.072Z",
+            "modified": "2024-05-21T04:09:33.073Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "tc.test(\"Response code expect to be 200\", function () {\r",
+                            "  expect(tc.response.status).to.equal(200);\r",
+                            "})\r",
+                            "\r",
+                            "tc.test(\"Munculkan pesan berhasil\", function () {\r",
+                            "  expect(tc.response.json.message).to.equal(\"Success\")\r",
+                            "})"
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "ref": "s_LBA1zT1fgiDnUKdNIL01AMemMG-hmTE1OsakABfbMxxrsY60SJL6PMVqCK5fLxHjMiunMVrhEy23A9dSQ3Yw"
+}
