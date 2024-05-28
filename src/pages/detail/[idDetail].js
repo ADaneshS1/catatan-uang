@@ -28,6 +28,7 @@ export default function Handler() {
                     <div>tanggal: {showData.tanggal}</div>
                     <div>bulan: {showData.bulan}</div>
                     <div>tahun: {showData.tahun}</div>
+                    <button onClick={() => {router.push(`/`)}}>Kembali</button>
                 </>
             )}
         </>

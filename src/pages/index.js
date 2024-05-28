@@ -40,10 +40,20 @@ export default function Home() {
     })
     .then((res) => res.json())
     .then(() => {
-      router.reload()
-    })
-    .catch((err) => {
-      alert("Ada Eror ", err.message)
+      // router.reload()
+      let dataTotalIncome = 0;
+      for(let i = 0; i < data.data.length; i++) {
+        dataTotalIncome += data.data[i].income
+      }
+      setIncomeTotal(dataTotalIncome)
+
+      let dataTotalOutcome = 0;
+      for(let i = 0; i < data.data.length; i++) {
+        dataTotalOutcome += data.data[i].outcome
+      }
+      setoutcomeTotal(dataTotalOutcome)
+
+      setTotalBalance(dataTotalIncome - dataTotalOutcome)
     })
   }
   return (

@@ -28,7 +28,7 @@ export default function EditData() {
         const bulan = parseInt(event.target.bulan.value);
         const tahun = parseInt(event.target.tahun.value);
 
-        fetch(`/api/updateData`, {
+        fetch(`/api/updateData?id=${idEdit}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -46,6 +46,7 @@ export default function EditData() {
             .then((res) => res.json())
             .then((data) => {
                 alert(data.message);
+                router.push(`/`)
             })
             .catch((err) => {
                 console.error("Error updating data:", err);
@@ -86,6 +87,7 @@ export default function EditData() {
                         </div>
                         <div>
                             <button type="submit">Update Data</button>
+                            <button onClick={() => {router.push(`/`)}}>Kembali</button>
                         </div>
                     </form>
                 </div>
